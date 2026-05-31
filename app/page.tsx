@@ -456,7 +456,7 @@ function useInView(threshold = 0.15) {
 // ============================================================
 // COUNTER COMPONENT
 // ============================================================
-function Counter({ target, suffix = "", duration = 2000 }) {
+function Counter({ target, suffix = "", duration = 2000 }: { target: number; suffix?: string; duration?: number }) {
   const [count, setCount] = useState(0);
   const [ref, inView] = useInView();
   useEffect(() => {
